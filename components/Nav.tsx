@@ -42,7 +42,7 @@ export default function Nav() {
         ))}
       </ul>
 
-      <h4 className={headingStyle}>Me</h4>
+      <h4 className={headingStyle}>Projects</h4>
 
       <ul>
         <li>
