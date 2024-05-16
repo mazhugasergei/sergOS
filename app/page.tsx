@@ -1,10 +1,25 @@
+import ExternalLink from "@/components/ExternalLink"
+import Section from "@/components/Section"
 import Image from "next/image"
 
 export default function Home() {
+  const paragraphStyles = "leading-[1.75] text-[#a3a3a3]"
+
   return (
     <div className="space-y-[4rem]">
       <Section>
-        <p>a</p>
+        <p className={paragraphStyles}>
+          Hey, I'm Sergei. I'm a web developer. I'm currently building{" "}
+          <ExternalLink href="https://github.com/SVIT-Solutions/whale-hunter">Whale Hunter</ExternalLink>, a tool for
+          analyzing transactions in blockchains.
+        </p>
+        <p className={paragraphStyles}>
+          Before Whale Hunter I was building{" "}
+          <ExternalLink href="https://github.com/stars/mazhugasergei/lists/commercial">
+            commercial projects
+          </ExternalLink>
+          .
+        </p>
       </Section>
       <Section title="Online">
         <p>a</p>
@@ -29,14 +44,5 @@ export default function Home() {
         </div>
       </Section>
     </div>
-  )
-}
-
-const Section = ({ title, children }: { title?: string; children: React.ReactNode }) => {
-  return (
-    <section className="grid max-md:flex-col gap-6 md:grid-cols-[1fr_5fr]">
-      <h4 className="max-md:text-lg max-md:font-bold md:text-[#737373] md:justify-self-end">{title}</h4>
-      <div>{children}</div>
-    </section>
   )
 }
