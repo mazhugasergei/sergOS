@@ -3,7 +3,7 @@ import Section from "@/components/Section"
 import Image from "next/image"
 
 export default function Home() {
-  const paragraphStyles = "leading-[1.75] text-[#a3a3a3]"
+  const paragraphStyles = "leading-[1.75] text-[#404040] dark:text-[#a3a3a3]"
 
   return (
     <div className="space-y-[4rem]">
@@ -26,7 +26,7 @@ export default function Home() {
       </Section>
       <Section title="Where">
         <Image src="/map.png" alt="map" width={567} height={567} className="rounded-2xl" />
-        <div className="flex items-center justify-end gap-2 text-sm text-[#737373] mt-2">
+        <div className="flex items-center justify-end gap-2 text-sm text-[#a3a3a3] dark:text-[#737373] mt-2">
           <svg
             width="12"
             height="12"
