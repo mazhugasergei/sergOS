@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Aside />
             <div id="content" className="h-screen overflow-y-auto w-full">
               <Header />
-              <main className="container max-w-3xl mx-auto py-10">{children}</main>
+              <main className="min-h-[200vh] container max-w-3xl mx-auto py-10">{children}</main>
             </div>
           </div>
         </ThemeProvider>
