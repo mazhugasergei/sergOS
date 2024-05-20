@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { BiSolidHome } from "react-icons/bi"
-import Image from "next/image"
+import LinkArrow from "./LinkArrow"
 
 type Category = { name?: string; items: { name: string; href: string; icon: JSX.Element; type?: "external" }[] }
 
@@ -42,11 +42,41 @@ const categories: Category[] = [
         ),
         type: "external",
       },
+      {
+        name: "KANCOO",
+        href: "https://kancoo.tech",
+        icon: <div className="w-[.875rem] h-[.875rem] rounded-full bg-[currentColor]" />,
+        type: "external",
+      },
     ],
   },
   {
     name: "Online",
-    items: [],
+    items: [
+      {
+        name: "GitHub",
+        href: "https://github.com/mazhugasergei",
+        icon: (
+          <svg
+            className="w-[.875rem] h-[.875rem]"
+            width="193"
+            height="193"
+            viewBox="0 0 1024 1024"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
+              transform="scale(64)"
+              fill="currentColor"
+            />
+          </svg>
+        ),
+        type: "external",
+      },
+    ],
   },
 ]
 
@@ -76,7 +106,7 @@ export default function Nav() {
                 >
                   {item.icon}
                   <span className="flex-1">{item.name}</span>
-                  {item.type === "external" && <LinkArrow />}
+                  {item.type === "external" && <LinkArrow className="opacity-40 dark:opacity-100 pl-3 pr-1" />}
                 </Link>
               </li>
             ))}
@@ -84,21 +114,7 @@ export default function Nav() {
         </div>
       ))}
 
-      {/* <ThemeButton /> */}
+      <ThemeButton className="mt-5" />
     </nav>
-  )
-}
-
-const LinkArrow = () => {
-  return (
-    <span className="pl-3 pr-1">
-      <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M9.00195 6.32617V0.824219C9.00195 0.490234 8.79102 0.267578 8.45117 0.267578L2.94922 0.279297C2.62109 0.279297 2.41016 0.519531 2.41016 0.794922C2.41016 1.07031 2.65039 1.30469 2.92578 1.30469H4.66602L7.45508 1.19922L6.39453 2.13672L1.16211 7.38086C1.05664 7.48633 0.998047 7.61523 0.998047 7.73828C0.998047 8.01367 1.24414 8.27734 1.53125 8.27734C1.66602 8.27734 1.78906 8.22461 1.89453 8.11914L7.13281 2.875L8.07617 1.81445L7.96484 4.48047V6.34961C7.96484 6.61914 8.19922 6.86523 8.48633 6.86523C8.76172 6.86523 9.00195 6.63672 9.00195 6.32617Z"
-          fill="currentColor"
-          className="fill-[#9b9b9b] dark:fill-primary"
-        />
-      </svg>
-    </span>
   )
 }
