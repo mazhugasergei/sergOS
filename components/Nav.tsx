@@ -1,6 +1,5 @@
 "use client"
 
-import ThemeButton from "./ThemeButton"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
@@ -128,8 +127,6 @@ export default function Nav() {
           </ul>
         </div>
       ))}
-
-      <ThemeButton className="mt-5" />
     </nav>
   )
 }

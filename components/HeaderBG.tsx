@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from "react"
 
-export default function HeaderBG() {
+export default function HeaderBG({ parentId }: { parentId: string }) {
   const [value, setValue] = useState(0)
 
   useEffect(() => {
-    const content = document.getElementById("content")
-    if (!content) return
-    content.addEventListener("scroll", (e) => {
-      setValue(Math.min(62, content.scrollTop * 2))
+    const parent = document.getElementById(parentId)
+    if (!parent) return
+    parent.addEventListener("scroll", (e) => {
+      setValue(Math.min(62, parent.scrollTop * 2))
     })
   }, [])
 

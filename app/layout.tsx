@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
 import { ThemeProvider } from "@/components/ThemeProvide"
@@ -19,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Aside />
             <div id="content" className="h-screen overflow-y-auto w-full">
               <Header />
-              <main className="min-h-[200vh] container max-w-3xl mx-auto py-10">{children}</main>
+              <main className="container max-w-3xl mx-auto py-10">{children}</main>
             </div>
           </div>
         </ThemeProvider>

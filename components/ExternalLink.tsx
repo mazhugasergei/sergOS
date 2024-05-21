@@ -9,7 +9,6 @@ export default ({ href, children }: { href: string; children: React.ReactNode })
       className="inline-flex items-center text-[#2563eb] dark:text-[#3b82f6] hover:underline"
     >
       {children}
-      <LinkArrow className="px-1" />
     </Link>
   )
 }

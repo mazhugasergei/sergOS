@@ -1,12 +1,14 @@
 import HeaderBG from "./HeaderBG"
 import Nav from "./Nav"
+import ThemeButton from "./ThemeButton"
 import { Button } from "./ui/button"
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export default function Header() {
   return (
-    <header className="min-h-[3.0625rem] sticky z-9 top-0 w-full flex items-center justify-between py-2 px-3 border-b border-border/40 backdrop-blur-lg">
-      <HeaderBG />
+    <header className="min-h-[3.0625rem] sticky z-9 top-0 w-full flex items-center justify-between border-b border-border/40 backdrop-blur-xl py-2 px-3">
+      <HeaderBG parentId="content" />
+      <ThemeButton />
       <Sheet>
         <SheetTrigger asChild>
           <Button size="icon" variant="ghost" className="h-8 w-8 lg:hidden">
@@ -25,7 +27,8 @@ export default function Header() {
             </svg>
           </Button>
         </SheetTrigger>
-        <SheetContent side="left" className="p-0">
+
+        <SheetContent side="left" className="w-full !max-w-[20rem] p-0">
           <div className="flex items-center gap-3 px-3 py-2">
             <SheetClose asChild>
               <Button size="icon" variant="ghost" className="h-8 w-8">
