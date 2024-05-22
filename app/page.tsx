@@ -15,6 +15,7 @@ export default function Home() {
           <ExternalLink href="https://github.com/SVIT-Solutions/whale-hunter">Whale Hunter</ExternalLink>, a tool for
           analyzing transactions in blockchains.
         </p>
+        <br />
         <p className={paragraphStyles}>
           Before Whale Hunter I was building{" "}
           <ExternalLink href="https://github.com/stars/mazhugasergei/lists/commercial">
@@ -22,15 +23,22 @@ export default function Home() {
           </ExternalLink>
           .
         </p>
+        <br />
+        <p className={paragraphStyles}>
+          I have also created <ExternalLink href="#">Mazhuga Sergei Bot</ExternalLink> that will help you receive logs
+          of your projects right in your Telegram chat.
+        </p>
       </Section>
+
       {/* online */}
       <Section title="Online">
-        <Link href="https://github.com/mazhugasergei" target="_blank" className="group flex items-center gap-4">
-          <span className="group-hover:text-[#2563eb] group-hover:underline">GitHub</span>
-          <div className="w-full border-t border-gray-300 border-dashed dark:border-gray-800" />
-          <div className="text-[#737373] dark:text-[#a3a3a3]">Follow</div>
-        </Link>
+        <div className="space-y-3">
+          <OnlineLink href="https://twitter.com/mazhugasergei" title="Twitter" action="Follow" />
+          <OnlineLink href="https://github.com/mazhugasergei" title="GitHub" action="Follow" />
+          <OnlineLink href="https://t.me/mazhugasergei" title="Telegram" action="Contact" />
+        </div>
       </Section>
+
       {/* map */}
       <Section title="Where">
         <Image src="/map.png" alt="map" width={567} height={567} className="rounded-2xl" />
@@ -52,5 +60,15 @@ export default function Home() {
         </div>
       </Section>
     </div>
+  )
+}
+
+const OnlineLink = ({ href, title, action }: { href: string; title: string; action: string }) => {
+  return (
+    <Link {...{ href }} target="_blank" className="group flex items-center gap-4">
+      <span className="group-hover:text-[#2563eb] group-hover:underline">{title}</span>
+      <div className="w-full border-t border-gray-300 border-dashed dark:border-gray-800" />
+      <div className="text-[#737373] dark:text-[#a3a3a3]">{action}</div>
+    </Link>
   )
 }
