@@ -1,12 +1,13 @@
+import CustomImage from "@/components/CustomImage"
 import ExternalLink from "@/components/ExternalLink"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function Home() {
-  const paragraphStyles = "text-[0.9375rem]"
+  const paragraphStyles = "text-[0.9375rem] leading-[1.75rem]"
 
   return (
-    <div className="flex flex-col gap-[4rem]">
+    <div className="flex flex-col gap-[1.4375rem]">
       {/* about */}
       <section className="flex flex-col gap-2">
         <h1>About</h1>
@@ -25,8 +26,9 @@ export default function Home() {
         </p>
 
         <p className={paragraphStyles}>
-          I have also created <ExternalLink href="#">Telegram Catcher Bot</ExternalLink> that catches errors and sends
-          them to your Telegram.
+          I have also created{" "}
+          <ExternalLink href="https://www.npmjs.com/package/tgreports">Telegram Catcher Bot</ExternalLink> that catches
+          errors and sends them to your Telegram.
         </p>
       </section>
 
@@ -40,7 +42,7 @@ export default function Home() {
 
       {/* map */}
       <section className="flex flex-col gap-2">
-        <Image src="/map.png" alt="map" width={1000} height={1000} className="aspect-[944/502] rounded-2xl" />
+        <CustomImage src="/map.png" alt="map" className="aspect-[944/502]" />
         <div className="flex items-center justify-end gap-2 text-sm text-[#a3a3a3] dark:text-[#737373] mt-2">
           <svg
             width="12"
@@ -73,7 +75,7 @@ export default function Home() {
 
 const OnlineLink = ({ href, title, action }: { href: string; title: string; action: string }) => {
   return (
-    <Link {...{ href }} target="_blank" className="group flex items-center gap-4">
+    <Link {...{ href }} target="_blank" className="group flex items-center gap-4 text-[0.9375rem]">
       <span className="shrink-0 group-hover:text-[#2563eb] group-hover:underline">{title}</span>
       <div className="w-full border-t border-gray-300 border-dashed dark:border-gray-800" />
       <div className="text-[#737373] dark:text-[#a3a3a3]">{action}</div>
