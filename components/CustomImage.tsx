@@ -16,9 +16,7 @@ export default function CustomImage({
       {...{ src, alt }}
       width={1000}
       height={1000}
-      className={`w-full rounded-[.75rem] pointer-events-none ${
-        border ? "border-[0.0625rem] border-[#282828]" : ""
-      } ${className}`}
+      className={`w-full rounded-[.75rem] pointer-events-none ${border ? "border border-[#282828]" : ""} ${className}`}
     />
   )
 }

@@ -2,19 +2,24 @@ import CodeBlock from "@/components/CodeBlock"
 import CustomImage from "@/components/CustomImage"
 import ExternalLink from "@/components/ExternalLink"
 import Link from "next/link"
+import Prism from "prismjs"
 
 export default function Home() {
   const paragraphStyles = "text-[0.9375rem] leading-[1.75rem]"
 
   return (
     <div className="flex flex-col gap-[1.4375rem]">
-      <CodeBlock>{`import { create } from 'zustand';
+      <CodeBlock
+        code={`import { create } from 'zustand'
 
 const useStore = create((set) => ({
   bears: 0,
   increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
   removeAllBears: () => set({ bears: 0 }),
-}));`}</CodeBlock>
+  updateBears: (newBears) => set({ bears: newBears }),
+}))`}
+        language="javascript"
+      />
 
       {/* about */}
       <section className="flex flex-col gap-2">
