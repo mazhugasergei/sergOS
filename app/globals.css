@@ -76,11 +76,3 @@
       "Open Sans", "Helvetica Neue", sans-serif;
   }
 }
-
-.backdrop-blur-lg {
-  backdrop-filter: blur(16px); /* Standard syntax */
-  -webkit-backdrop-filter: blur(16px); /* Safari 9.0+ & iOS Safari 9.0+ */
-  -moz-backdrop-filter: blur(16px); /* Firefox 44+ */
-  -o-backdrop-filter: blur(16px); /* Opera 9.5+ */
-  -ms-backdrop-filter: blur(16px); /* Microsoft Edge 79+ */
-}

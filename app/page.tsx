@@ -1,21 +1,21 @@
 import ExternalLink from "@/components/ExternalLink"
-import Section from "@/components/Section"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function Home() {
-  const paragraphStyles = "leading-[1.75] text-[#404040] dark:text-[#a3a3a3]"
+  const paragraphStyles = "text-[0.9375rem]"
 
   return (
-    <div className="space-y-[4rem]">
+    <div className="flex flex-col gap-[4rem]">
       {/* about */}
-      <Section>
+      <section className="flex flex-col gap-2">
+        <h1>About</h1>
         <p className={paragraphStyles}>
           Hey, I'm Sergei, a web developer. Our team is currently building{" "}
           <ExternalLink href="https://github.com/SVIT-Solutions/whale-hunter">Whale Hunter</ExternalLink>, a tool for
           analyzing transactions in blockchains.
         </p>
-        <br />
+
         <p className={paragraphStyles}>
           Before Whale Hunter I was building{" "}
           <ExternalLink href="https://github.com/stars/mazhugasergei/lists/commercial">
@@ -23,25 +23,24 @@ export default function Home() {
           </ExternalLink>
           .
         </p>
-        <br />
-        <p className={paragraphStyles}>
-          I have also created <ExternalLink href="#">Mazhuga Sergei Bot</ExternalLink> that will help you receive logs
-          of your projects right in your Telegram chat.
-        </p>
-      </Section>
 
-      {/* online */}
-      <Section title="Online">
+        <p className={paragraphStyles}>
+          I have also created <ExternalLink href="#">Telegram Catcher Bot</ExternalLink> that catches errors and sends
+          them to your Telegram.
+        </p>
+      </section>
+
+      {/* projects */}
+      <section className="flex flex-col gap-2">
         <div className="space-y-3">
-          <OnlineLink href="https://twitter.com/mazhugasergei" title="Twitter" action="Follow" />
-          <OnlineLink href="https://github.com/mazhugasergei" title="GitHub" action="Follow" />
-          <OnlineLink href="https://t.me/mazhugasergei" title="Telegram" action="Contact" />
+          <OnlineLink href="https://dod.dvfu.ru" title="FEFU Open Day" action="Visit" />
+          <OnlineLink href="https://kancoo.tech" title="KANCOO" action="Visit" />
         </div>
-      </Section>
+      </section>
 
       {/* map */}
-      <Section title="Where">
-        <Image src="/map.png" alt="map" width={567} height={567} className="rounded-2xl" />
+      <section className="flex flex-col gap-2">
+        <Image src="/map.png" alt="map" width={1000} height={1000} className="aspect-[944/502] rounded-2xl" />
         <div className="flex items-center justify-end gap-2 text-sm text-[#a3a3a3] dark:text-[#737373] mt-2">
           <svg
             width="12"
@@ -58,7 +57,16 @@ export default function Home() {
           </svg>
           <span>Vladivostok, Primorsky Krai</span>
         </div>
-      </Section>
+      </section>
+
+      {/* online */}
+      <section className="flex flex-col gap-2">
+        <div className="space-y-3">
+          <OnlineLink href="https://twitter.com/mazhugasergei" title="Twitter" action="Follow" />
+          <OnlineLink href="https://github.com/mazhugasergei" title="GitHub" action="Follow" />
+          <OnlineLink href="https://t.me/mazhugasergei" title="Telegram" action="Contact" />
+        </div>
+      </section>
     </div>
   )
 }
@@ -66,7 +74,7 @@ export default function Home() {
 const OnlineLink = ({ href, title, action }: { href: string; title: string; action: string }) => {
   return (
     <Link {...{ href }} target="_blank" className="group flex items-center gap-4">
-      <span className="group-hover:text-[#2563eb] group-hover:underline">{title}</span>
+      <span className="shrink-0 group-hover:text-[#2563eb] group-hover:underline">{title}</span>
       <div className="w-full border-t border-gray-300 border-dashed dark:border-gray-800" />
       <div className="text-[#737373] dark:text-[#a3a3a3]">{action}</div>
     </Link>

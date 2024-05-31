@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import "./globals.css"
-import Header from "@/components/Header"
 import { ThemeProvider } from "@/components/ThemeProvide"
 import Aside from "@/components/Aside"
 
@@ -12,15 +11,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="overflow-hidden dark:text-white dark:bg-[#050505]">
+      <body className="container lg:flex text-[#171717] dark:text-[#ededed] dark:bg-[#161616] py-10">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className="flex">
-            <Aside />
-            <div id="content" className="h-screen overflow-y-auto w-full">
-              <Header />
-              <main className="container max-w-3xl text-[#404040] dark:text-[#f5f5f5] mx-auto py-10">{children}</main>
-            </div>
-          </div>
+          <Aside />
+          <main className="w-full max-w-[42rem] mx-auto">{children}</main>
         </ThemeProvider>
       </body>
     </html>
