@@ -5,23 +5,17 @@ import ThemeSwitch from "./ThemeSwitch"
 
 export default function Aside() {
   return (
-    <aside
-      className={cn(
-        "max-lg:max-w-[42rem] max-lg:mx-auto",
-        "flex flex-col pb-6",
-        "lg:h-screen lg:fixed top-0 lg:px-6 lg:pt-[inherit]"
-      )}
-    >
+    <aside className="max-lg:hidden h-screen fixed top-0 flex flex-col py-[inherit] px-6">
       <h2>
-        Mazhuga <br className="hidden lg:max-xl:block" />
+        Mazhuga <br />
         Sergei
       </h2>
 
-      <Nav className="max-lg:hidden my-2" />
+      <Nav className="my-2" />
 
       <ThemeSwitch />
 
-      <div className="opacity-50 max-lg:hidden font-mono text-xs mt-auto">
+      <div className="opacity-50 font-mono text-xs mt-auto">
         <Resolution className="" />
       </div>
     </aside>
