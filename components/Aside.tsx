@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils"
 import Nav from "./Nav"
 import Resolution from "./Resolution"
+import ThemeSwitch from "./ThemeSwitch"
 
 export default function Aside() {
   return (
@@ -11,11 +12,15 @@ export default function Aside() {
         "lg:h-screen lg:fixed top-0 lg:px-6 lg:pt-[inherit]"
       )}
     >
-      <h2 className="mb-2">
+      <h2>
         Mazhuga <br className="hidden lg:max-xl:block" />
         Sergei
       </h2>
-      <Nav className="max-lg:hidden" />
+
+      <Nav className="max-lg:hidden my-2" />
+
+      <ThemeSwitch />
+
       <div className="max-lg:hidden font-mono text-xs opacity-50 mt-auto">
         <Resolution />
       </div>

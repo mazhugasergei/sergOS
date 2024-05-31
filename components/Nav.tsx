@@ -23,7 +23,7 @@ export default function Nav({ className }: { className?: string }) {
           <li key={route.name}>
             <Link
               href={route.href}
-              className="block text-[0.8125rem] text-[#a0a0a0] hover:text-[#ededed] transition-colors p-1 -mx-1"
+              className="block text-[0.8125rem] opacity-60 hover:opacity-100 transition-opacity p-1 -mx-1"
             >
               {route.name}
             </Link>
