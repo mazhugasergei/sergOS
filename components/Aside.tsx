@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils"
 import Nav from "./Nav"
 import Resolution from "./Resolution"
 import ThemeSwitch from "./ThemeSwitch"

@@ -1,6 +1,6 @@
+import CodeBlock from "@/components/CodeBlock"
 import CustomImage from "@/components/CustomImage"
 import ExternalLink from "@/components/ExternalLink"
-import Image from "next/image"
 import Link from "next/link"
 
 export default function Home() {
@@ -8,6 +8,14 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-[1.4375rem]">
+      <CodeBlock>{`import { create } from 'zustand';
+
+const useStore = create((set) => ({
+  bears: 0,
+  increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
+  removeAllBears: () => set({ bears: 0 }),
+}));`}</CodeBlock>
+
       {/* about */}
       <section className="flex flex-col gap-2">
         <h1>About</h1>
