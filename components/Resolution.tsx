@@ -1,8 +1,10 @@
 "use client"
 
+import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 
-export default function Resolution() {
+export default function Resolution({ className }: { className?: string }) {
+  const pathname = usePathname()
   const [width, setWidth] = useState(0)
   const [height, setHeight] = useState(0)
 
@@ -16,8 +18,10 @@ export default function Resolution() {
   }, [])
 
   return (
-    <div className={`${width && height ? "opacity-100" : "opacity-0"} transition-opacity`}>
-      {width} x {height}
-    </div>
+    pathname === "/" && (
+      <div className={`${width && height ? "opacity-1000" : "opacity-0"} transition-opacity`}>
+        {width} x {height}
+      </div>
+    )
   )
 }

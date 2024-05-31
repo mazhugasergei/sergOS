@@ -21,8 +21,8 @@ export default function Aside() {
 
       <ThemeSwitch />
 
-      <div className="max-lg:hidden font-mono text-xs opacity-50 mt-auto">
-        <Resolution />
+      <div className="opacity-50 max-lg:hidden font-mono text-xs mt-auto">
+        <Resolution className="" />
       </div>
     </aside>
   )
