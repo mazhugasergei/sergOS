@@ -13,13 +13,12 @@ export default function ThemeButton() {
   }, [theme])
 
   return (
-    <div className="flex items-center gap-2">
-      <button onClick={() => setTheme("light")} className={`${clientTheme !== "light" ? "opacity-40" : ""} p-1 -m-1`}>
-        <SunMedium size={16} />
-      </button>
-      <button onClick={() => setTheme("dark")} className={`${clientTheme !== "dark" ? "opacity-40" : ""} p-1 -m-1`}>
-        <Moon size={16} />
-      </button>
-    </div>
+    <button
+      onClick={() => setTheme(clientTheme === "dark" ? "light" : "dark")}
+      className="self-start flex items-center gap-2 rounded-full p-2 -m-2"
+    >
+      <SunMedium size={16} className={clientTheme !== "light" ? "opacity-50" : ""} />
+      <Moon size={16} className={clientTheme !== "dark" ? "opacity-50" : ""} />
+    </button>
   )
 }
