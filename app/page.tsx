@@ -1,45 +1,23 @@
 import CodeBlock from "@/components/CodeBlock"
-import CustomImage from "@/components/CustomImage"
+import Img from "@/components/Img"
 import ExternalLink from "@/components/ExternalLink"
 import Link from "next/link"
-import Prism from "prismjs"
+import Video from "@/components/Video"
 
 export default function Home() {
-  const paragraphStyles = "text-[0.9375rem] leading-[1.75rem]"
-
   return (
-    <div className="flex flex-col gap-[1.4375rem]">
-      <CodeBlock
-        code={`import { create } from 'zustand'
-
-const useStore = create((set) => ({
-  bears: 0,
-  increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-  removeAllBears: () => set({ bears: 0 }),
-  updateBears: (newBears) => set({ bears: newBears }),
-}))`}
-        language="javascript"
-      />
-
+    <div className="flex flex-col gap-2">
       {/* about */}
       <section className="flex flex-col gap-2">
         <h1>About</h1>
-        <p className={paragraphStyles}>
+        <p>
           Hey, I'm Sergei, a web developer. Our team is currently building{" "}
           <ExternalLink href="https://github.com/SVIT-Solutions/whale-hunter">Whale Hunter</ExternalLink>, a tool for
-          analyzing transactions in blockchains.
-        </p>
-
-        <p className={paragraphStyles}>
-          Before Whale Hunter I was building{" "}
+          analyzing transactions in blockchains. Before Whale Hunter I was building{" "}
           <ExternalLink href="https://github.com/stars/mazhugasergei/lists/commercial">
             commercial projects
           </ExternalLink>
-          .
-        </p>
-
-        <p className={paragraphStyles}>
-          I have also created{" "}
+          . I have also created{" "}
           <ExternalLink href="https://www.npmjs.com/package/tgreports">Telegram Catcher Bot</ExternalLink> that catches
           errors and sends them to your Telegram.
         </p>
@@ -55,7 +33,7 @@ const useStore = create((set) => ({
 
       {/* map */}
       <section className="flex flex-col gap-2">
-        <CustomImage src="/map.png" alt="map" className="aspect-[944/502]" />
+        <Img src="/map.png" alt="map" className="aspect-[944/502]" />
         <div className="flex items-center justify-end gap-2 text-sm text-[#a3a3a3] dark:text-[#737373] mt-2">
           <svg
             width="12"

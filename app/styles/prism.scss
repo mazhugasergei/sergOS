@@ -1,0 +1,55 @@
+code,
+pre {
+  &[class*="language-"] {
+    color: #e4f0fb;
+  }
+}
+
+.token {
+  &.comment,
+  &.prolog,
+  &.doctype,
+  &.cdata {
+    color: #636f88;
+  }
+
+  &.number {
+    color: #b48ead;
+  }
+
+  &.selector,
+  &.attr-name,
+  &.string,
+  &.char,
+  &.builtin,
+  &.inserted,
+  &.atrule,
+  &.attr-value,
+  &.function,
+  &.class-name {
+    color: #5de4c7;
+  }
+
+  &.regex,
+  &.important {
+    color: #ebcb8b;
+  }
+
+  &.boolean,
+  &.operator,
+  &.entity,
+  &.url,
+  &.variable,
+  &.keyword {
+    color: #add7ff;
+  }
+}
+
+.language-css,
+.style {
+  .token {
+    &.string {
+      color: #add7ff;
+    }
+  }
+}
