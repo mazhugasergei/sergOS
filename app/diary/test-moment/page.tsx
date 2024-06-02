@@ -1,26 +1,21 @@
 import CodeBlock from "@/components/CodeBlock"
-import CopyURL from "@/components/CopyURL"
 import Video from "@/components/Video"
+import Image from "@/components/Image"
+import Link from "@/components/Link"
+import Moment from "@/components/Moment"
 
 export default () => {
   return (
-    <>
-      <div className="flex items-center justify-between">
-        <div className="space-y-2">
-          <h1>Test Moment</h1>
-          <div className="text-[0.8125rem] opacity-50">June 2024</div>
-        </div>
-        <CopyURL />
-      </div>
+    <Moment title="Test Moment" subtitle="June 2024">
       <section>
         <h2>Lorem Ipsum</h2>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta dolores, non consectetur beatae ea iure
-          placeat sapiente consequatur, minus, sed quisquam architecto quibusdam odit sequi cumque doloribus tempore
-          corporis modi laborum perspiciatis repudiandae qui. Vel temporibus provident et ducimus commodi error,
-          suscipit, laboriosam vero fuga sequi soluta illo culpa, eum possimus aut aliquam officiis beatae magnam totam?
-          Ducimus quaerat sequi iusto vitae, aliquam fuga quibusdam, tempore culpa autem est aspernatur eveniet
-          doloremque illo provident in? Magni autem minus hic dolor?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. <Link href="#">Soluta</Link> dolores, non
+          consectetur beatae ea iure placeat sapiente consequatur, minus, sed quisquam architecto quibusdam odit sequi
+          cumque doloribus tempore corporis modi laborum perspiciatis repudiandae qui. Vel temporibus provident et
+          ducimus commodi error, suscipit, laboriosam vero fuga sequi soluta illo culpa, eum possimus aut aliquam
+          officiis beatae magnam totam? Ducimus quaerat sequi iusto vitae, aliquam fuga quibusdam, tempore culpa autem
+          est aspernatur eveniet doloremque illo provident in? Magni autem minus hic dolor?
         </p>
         <CodeBlock
           code={`import { create } from 'zustand'
@@ -40,7 +35,15 @@ updateBears: (newBears) => set({ bears: newBears }),
         </p>
 
         <Video src="/test.mp4" />
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nisi ducimus neque quisquam tempore, suscipit
+          libero pariatur doloribus cupiditate laborum. Libero culpa aperiam ut repudiandae reiciendis nemo ipsa non
+          minus.
+        </p>
+
+        <Image src="/test.jpg" alt="test" />
       </section>
-    </>
+    </Moment>
   )
 }
