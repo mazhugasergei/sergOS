@@ -12,12 +12,8 @@ export default function Nav({ className }: { className?: string }) {
       href: "/",
     },
     {
-      name: "test page  ",
-      href: "/test",
-    },
-    {
-      name: "test page   ",
-      href: "/test",
+      name: "Diary",
+      href: "/diary",
     },
   ]
 
