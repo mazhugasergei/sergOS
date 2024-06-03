@@ -8,7 +8,7 @@ export default function Page() {
     <Moment>
       {/* about */}
       <section>
-        <h2>About</h2>
+        <h1>About</h1>
         <p>
           Hey, I'm Sergei, a web developer. Our team is currently building{" "}
           <Link href="https://github.com/SVIT-Solutions/whale-hunter" external>

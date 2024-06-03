@@ -6,7 +6,7 @@ import Moment from "@/components/Moment"
 
 export default () => {
   return (
-    <Moment title="Test Moment" subtitle="June 2024">
+    <Moment title="Test Page" subtitle="June 2024">
       <section>
         <h2>Lorem Ipsum</h2>
         <p>
