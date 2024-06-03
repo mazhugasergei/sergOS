@@ -1,11 +1,11 @@
 import Image from "@/components/Image"
 import Link from "@/components/Link"
-import Moment from "@/components/Moment"
+import Post from "@/components/Post"
 import OnlineLink from "@/components/OnlineLink"
 
 export default function Page() {
   return (
-    <Moment>
+    <Post>
       {/* about */}
       <section>
         <h1>About</h1>
@@ -65,6 +65,6 @@ export default function Page() {
           <span>Vladivostok, Primorsky Krai</span>
         </div>
       </section>
-    </Moment>
+    </Post>
   )
 }

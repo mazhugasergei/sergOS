@@ -1,6 +1,6 @@
 import CopyURL from "@/components/CopyURL"
 
-export default function Moment({
+export default function Post({
   title,
   subtitle,
   children,

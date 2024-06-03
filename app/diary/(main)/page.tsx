@@ -1,18 +1,18 @@
 import Link from "@/components/Link"
-import Moment from "@/components/Moment"
+import Post from "@/components/Post"
 
 export default function Page() {
   const pages = ["Test page"]
 
   return (
-    <Moment>
-      <h1>Craft</h1>
+    <Post>
+      <h1>Diary</h1>
       <section>
         <ul>
           {pages.map((title, i) => (
             <li key={`${i}_${title}`}>
               <p>
-                <Link href={`/craft/${title.toLowerCase().replace(/\s+/g, "-")}`} className="block">
+                <Link href={`/diary/${title.toLowerCase().replace(/\s+/g, "-")}`} className="block">
                   {title}
                 </Link>
               </p>
@@ -20,6 +20,6 @@ export default function Page() {
           ))}
         </ul>
       </section>
-    </Moment>
+    </Post>
   )
 }

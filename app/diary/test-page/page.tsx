@@ -2,11 +2,11 @@ import CodeBlock from "@/components/CodeBlock"
 import Video from "@/components/Video"
 import Image from "@/components/Image"
 import Link from "@/components/Link"
-import Moment from "@/components/Moment"
+import Post from "@/components/Post"
 
 export default () => {
   return (
-    <Moment title="Test Page" subtitle="June 2024">
+    <Post title="Test Page" subtitle="June 2024">
       <section>
         <h2>Lorem Ipsum</h2>
         <p>
@@ -21,10 +21,10 @@ export default () => {
           code={`import { create } from 'zustand'
 
 const useStore = create((set) => ({
-bears: 0,
-increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-removeAllBears: () => set({ bears: 0 }),
-updateBears: (newBears) => set({ bears: newBears }),
+  bears: 0,
+  increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
+  removeAllBears: () => set({ bears: 0 }),
+  updateBears: (newBears) => set({ bears: newBears }),
 }))`}
           language="javascript"
         />
@@ -44,6 +44,6 @@ updateBears: (newBears) => set({ bears: newBears }),
 
         <Image src="/test.jpg" alt="test" />
       </section>
-    </Moment>
+    </Post>
   )
 }

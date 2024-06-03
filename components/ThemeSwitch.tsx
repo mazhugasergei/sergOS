@@ -16,7 +16,7 @@ export default function ThemeButton({ className }: { className?: string }) {
   return (
     <button
       onClick={() => setTheme(clientTheme === "dark" ? "light" : "dark")}
-      className={cn("self-start flex items-center gap-2 rounded-full p-2 -m-2", className)}
+      className={`block flex items-center gap-2 rounded-full p-2 -m-2 ${className}`}
     >
       <SunMedium size={16} className={clientTheme !== "light" ? "opacity-50" : ""} />
       <Moon size={16} className={clientTheme !== "dark" ? "opacity-50" : ""} />

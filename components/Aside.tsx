@@ -12,7 +12,7 @@ export default function Aside() {
 
       <Nav className="my-2" />
 
-      <ThemeSwitch />
+      <ThemeSwitch className="self-start" />
 
       <div className="opacity-50 font-mono text-xs mt-auto">
         <Resolution />
