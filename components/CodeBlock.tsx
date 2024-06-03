@@ -25,7 +25,7 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
   return (
     <pre
       tabIndex={-1}
-      className={`overflow-x-auto relative text-[0.8125rem] leading-[1.5] bg-[#252B37] dark:bg-[#1c1c1c] dark:border border-[#282828] rounded-[.75rem] p-[1.5625rem] my-3 language-${language}`}
+      className={`overflow-x-auto relative text-[0.8125rem] leading-[1.5] bg-[#1c1c1c] border border-[#282828] rounded-[.75rem] p-[1.5625rem] my-3 language-${language}`}
     >
       {/* copy button */}
       <Button
@@ -35,10 +35,10 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
           navigator.clipboard.writeText(code)
           setCopied(true)
         }}
-        className="absolute top-4 right-4 !text-[currentColor] hover:bg-[#fff]/5 rounded-lg"
+        className="absolute top-4 right-4 !text-[currentColor] hover:bg-[#fff]/10 rounded-lg"
       >
-        <Clipboard size={13} className={copied ? "opacity-0" : "opacity-70"} />
-        <Check size={13} className={`opacity-${copied ? "70" : "0"} -ml-[0.8125rem] `} />
+        <Clipboard size={13} className={copied ? "opacity-0" : "opacity-80"} />
+        <Check size={13} className={`opacity-${copied ? "80" : "0"} -ml-[0.8125rem] `} />
       </Button>
 
       {/* code */}

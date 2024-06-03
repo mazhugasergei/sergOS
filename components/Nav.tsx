@@ -18,8 +18,8 @@ export default function Nav({ className }: { className?: string }) {
   ]
 
   return (
-    <nav className={`${className}`}>
-      <ul className="my-6">
+    <nav className={className}>
+      <ul className="max-lg:flex max-lg:items-center max-lg:gap-2 lg:my-6">
         {routes.map((route) => (
           <li key={route.name}>
             <Link

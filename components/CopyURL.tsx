@@ -11,7 +11,7 @@ export default function CopyURL() {
     if (copied) {
       setTimeout(() => {
         setCopied(false)
-      }, 800)
+      }, 1000)
     }
   }, [copied])
 
