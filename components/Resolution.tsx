@@ -16,7 +16,7 @@ export default function Resolution({ className }: { className?: string }) {
   }, [])
 
   return (
-    <div className={`${width && height ? "opacity-1000" : "opacity-0"} transition-opacity`}>
+    <div className={width && height ? "opacity-1000" : "opacity-0"}>
       {width} x {height}
     </div>
   )
