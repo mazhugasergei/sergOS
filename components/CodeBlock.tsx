@@ -23,10 +23,17 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
   }, [copied])
 
   return (
-    <pre
-      tabIndex={-1}
-      className={`overflow-x-auto relative text-[0.8125rem] leading-[1.5] bg-[#1c1c1c] border rounded-[.75rem] p-[1.5625rem] my-3 language-${language}`}
-    >
+    <div className="relative my-3">
+      <pre
+        tabIndex={-1}
+        className={`overflow-x-auto text-[0.8125rem] leading-[1.5] bg-[#222] dark:bg-[#1c1c1c] border rounded-[.75rem] p-[1.5625rem] language-${language}`}
+      >
+        {/* code */}
+        <code ref={ref} className={`language-${language}`}>
+          {code}
+        </code>
+      </pre>
+
       {/* copy button */}
       <Button
         variant="ghost"
@@ -35,17 +42,12 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
           navigator.clipboard.writeText(code)
           setCopied(true)
         }}
-        className="absolute top-4 right-4 !text-[currentColor] hover:bg-[#fff]/10 rounded-lg"
+        className="absolute top-4 right-4 !text-[#fff] hover:bg-[#fff]/10 rounded-lg"
       >
         <Clipboard size={13} className={copied ? "opacity-0" : "opacity-80"} />
         <Check size={13} className={`opacity-${copied ? "80" : "0"} -ml-[0.8125rem] `} />
       </Button>
-
-      {/* code */}
-      <code ref={ref} className={`language-${language}`}>
-        {code}
-      </code>
-    </pre>
+    </div>
   )
 }
 
