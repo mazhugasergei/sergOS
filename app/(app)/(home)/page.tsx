@@ -2,10 +2,12 @@ import Image from "@/components/Image"
 import Link from "@/components/Link"
 import Post from "@/components/Post"
 import OnlineLink from "@/components/OnlineLink"
+import ThemeSwitch from "@/components/ThemeSwitch"
 
 export default function Page() {
   return (
     <Post title="Mazhuga Sergei" subtitle="June 2024">
+      {/* <ThemeSwitch /> */}
       {/* about */}
       <section>
         <h2>About</h2>

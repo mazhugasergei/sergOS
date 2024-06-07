@@ -29,6 +29,7 @@ export default function Dock() {
   ]
 
   const currentRoute = routes.find((route) => route.href === "/" + pathname.split("/")[1])
+  const restRoutes = routes.filter((route) => route.href !== "/" + pathname.split("/")[1])
 
   const links = [
     {
@@ -50,21 +51,16 @@ export default function Dock() {
         {/* <- white space at the bottom */}
       <div className="container w-full fixed bottom-2 left-1/2 -translate-x-1/2 flex justify-center text-[0.875rem]">
         {/* visible dock */}
-        <div className="relative max-w-full bg-background-lighter rounded-full p-0.5">
+        <div className="relative max-w-full bg-background-lighter rounded-full shadow p-0.5">
           {/* menu */}
           {menuOpened && (
-            <menu className="absolute left-0 bottom-full w-full bg-background-lighter rounded-[1rem] p-0.5 mb-1">
+            <menu className="absolute left-0 bottom-full w-full bg-background-lighter rounded-[1rem] animate-in slide-in-from-bottom-1 p-0.5 mb-1">
               <div className="bg-background rounded-[0.875rem] space-y-2 p-4">
                 <ul className="flex flex-col gap-2">
-                  {routes.map((route) => (
-                    <li key={route.name}>
-                      <Link
-                        href={route.href}
-                        className={`"block text-[0.8125rem] text-${
-                          pathname === route.href ? "primary" : "muted"
-                        } hover:text-primary transition p-1 -mx-1"`}
-                      >
-                        {route.name}
+                  {links.map((link) => (
+                    <li key={link.name}>
+                      <Link href={link.href} target="_blank" className={`"block text-[0.8125rem] p-1 -mx-1"`}>
+                        {link.name}
                       </Link>
                     </li>
                   ))}
@@ -86,16 +82,15 @@ export default function Dock() {
             </button>
 
             {/* links */}
-            {links.map((link, i) => (
+            {restRoutes.map((route, i) => (
               <Link
-                key={link.name}
-                href={link.href}
-                target="_blank"
+                key={route.name}
+                href={route.href}
                 className={`bg-background p-2 ${i === 0 ? "rounded-l-full pl-4" : ""} ${
-                  i === links.length - 1 ? "rounded-r-full pr-4" : ""
+                  i === restRoutes.length - 1 ? "rounded-r-full pr-4" : ""
                 }`}
               >
-                {link.name}
+                {route.name}
               </Link>
             ))}
           </div>
