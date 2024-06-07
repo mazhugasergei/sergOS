@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function AsideAlt({ title, href, className }: { title: string; href: string; className?: string }) {
   return (
-    <aside className="max-w-[42rem] lg:fixed top-0 lg:-translate-x-[150%] xl:-translate-x-[200%] flex flex-col max-lg:pb-[inherit] lg:pt-[inherit] lg:px-6 mx-auto">
+    <aside className="max-w-[42rem] lg:fixed top-0 flex flex-col max-lg:pb-[inherit] lg:pt-[inherit] lg:px-6 mx-auto">
       <Link
         {...{ href }}
         className={`flex self-start items-center gap-1 text-muted hover:text-primary transition p-1 -m-1 ${className}`}
