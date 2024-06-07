@@ -4,7 +4,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <AsideAlt title="Diary" href="/diary" />
-      <main>{children}</main>
+      {children}
     </>
   )
 }
