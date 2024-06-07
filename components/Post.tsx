@@ -15,7 +15,7 @@ export default function Post({
         <div className="flex items-center justify-between">
           <div className="space-y-2">
             <h1>{title}</h1>
-            {subtitle && <div className="text-[0.8125rem] opacity-60">{subtitle}</div>}
+            {subtitle && <div className="text-[0.8125rem] text-secondary">{subtitle}</div>}
           </div>
           <CopyURL />
         </div>

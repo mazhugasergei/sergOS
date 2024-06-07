@@ -5,10 +5,10 @@ import OnlineLink from "@/components/OnlineLink"
 
 export default function Page() {
   return (
-    <Post>
+    <Post title="Mazhuga Sergei" subtitle="June 2024">
       {/* about */}
       <section>
-        <h1>About</h1>
+        <h2>About</h2>
         <p>
           Hey, I'm Sergei, a web developer. Our team is currently building{" "}
           <Link href="https://github.com/SVIT-Solutions/whale-hunter" external>
@@ -49,7 +49,7 @@ export default function Page() {
       <section>
         <div>
           <Image src="/map.png" alt="map" className="aspect-[944/502]" />
-          <div className="flex items-center justify-end gap-2 text-sm text-[#a3a3a3] dark:text-[#737373] mt-2">
+          <div className="flex items-center justify-end gap-2 text-sm text-muted mt-2">
             <svg
               width="12"
               height="12"

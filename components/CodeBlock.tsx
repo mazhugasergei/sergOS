@@ -25,7 +25,7 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
   return (
     <pre
       tabIndex={-1}
-      className={`overflow-x-auto relative text-[0.8125rem] leading-[1.5] bg-[#1c1c1c] border border-[#282828] rounded-[.75rem] p-[1.5625rem] my-3 language-${language}`}
+      className={`overflow-x-auto relative text-[0.8125rem] leading-[1.5] bg-[#1c1c1c] border rounded-[.75rem] p-[1.5625rem] my-3 language-${language}`}
     >
       {/* copy button */}
       <Button

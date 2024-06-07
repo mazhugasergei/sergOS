@@ -5,7 +5,7 @@ export default function AsideAlt({ title, href, className }: { title: string; hr
     <aside className="max-w-[42rem] lg:fixed top-0 flex flex-col max-lg:pb-[inherit] lg:pt-[inherit] lg:px-6 mx-auto">
       <Link
         {...{ href }}
-        className={`flex self-start items-center gap-1 opacity-60 hover:opacity-100 transition-opacity p-1 -m-1 ${className}`}
+        className={`flex self-start items-center gap-1 text-muted hover:text-primary transition p-1 -m-1 ${className}`}
       >
         <svg width="18px" height="18px" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" color="currentColor">
           <path

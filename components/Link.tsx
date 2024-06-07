@@ -15,7 +15,7 @@ export default function CustomLink({
     <Link
       {...{ href }}
       target={external ? "_blank" : "_self"}
-      className={`inline-flex items-center underline decoration-1 decoration-[#a0a0a0] underline-offset-[0.1875rem] ${className}`}
+      className={`inline-flex items-center underline decoration-1 decoration-muted underline-offset-[0.1875rem] ${className}`}
     >
       {children}
     </Link>

@@ -14,7 +14,7 @@ export default function Aside() {
 
       <ThemeSwitch className="lg:self-start" />
 
-      <div className="max-lg:hidden opacity-50 font-mono text-xs mt-auto">
+      <div className="max-lg:hidden text-muted font-mono text-xs mt-auto">
         <Resolution />
       </div>
     </aside>
