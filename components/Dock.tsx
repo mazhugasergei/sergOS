@@ -4,6 +4,7 @@ import { Menu } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useRef, useState } from "react"
+import ThemeSwitch from "./ThemeSwitch"
 
 export default function Dock() {
   const pathname = usePathname()
@@ -56,7 +57,7 @@ export default function Dock() {
           {menuOpened && (
             <menu className="absolute left-0 bottom-full w-full bg-background-lighter rounded-[1rem] animate-in slide-in-from-bottom-1 p-0.5 mb-1">
               <div className="bg-background rounded-[0.875rem] space-y-2 p-4">
-                <ul className="flex flex-col gap-2">
+                <ul className="flex flex-col gap-2 mb-2">
                   {links.map((link) => (
                     <li key={link.name}>
                       <Link href={link.href} target="_blank" className={`"block text-[0.8125rem] p-1 -mx-1"`}>
@@ -65,6 +66,7 @@ export default function Dock() {
                     </li>
                   ))}
                 </ul>
+                <ThemeSwitch />
               </div>
             </menu>
           )}

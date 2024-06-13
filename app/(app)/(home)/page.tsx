@@ -7,7 +7,7 @@ import ThemeSwitch from "@/components/ThemeSwitch"
 export default function Page() {
   return (
     <Post title="Mazhuga Sergei" subtitle="June 2024">
-      <ThemeSwitch />
+      {/* <ThemeSwitch /> */}
       {/* about */}
       <section>
         <h2>About</h2>
