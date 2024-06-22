@@ -16,9 +16,11 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
 
   useEffect(() => {
     if (copied) {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         setCopied(false)
       }, 1000)
+
+      return () => clearTimeout(timer)
     }
   }, [copied])
 

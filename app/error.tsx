@@ -1,7 +1,6 @@
-'use client'
+"use client"
 
-import Link from '@/components/Link'
-import { Unplug } from 'lucide-react'
+import { Unplug } from "lucide-react"
 
 export default function Error() {
   return (

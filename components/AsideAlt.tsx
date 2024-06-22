@@ -1,8 +1,10 @@
-import Link from "next/link"
+import Link from 'next/link'
+import Contents from './Contents'
 
 export default function AsideAlt({ title, href, className }: { title: string; href: string; className?: string }) {
   return (
     <aside className="max-w-[42rem] lg:fixed top-0 flex flex-col max-lg:pb-[inherit] lg:pt-[inherit] lg:px-6 mx-auto">
+      {/* back */}
       <Link
         {...{ href }}
         className={`flex self-start items-center gap-1 text-secondary hover:text-primary transition p-1 -m-1 ${className}`}
@@ -25,6 +27,9 @@ export default function AsideAlt({ title, href, className }: { title: string; hr
         </svg>
         <span className="text-[0.875rem]">{title}</span>
       </Link>
+
+      {/* contents */}
+      <Contents />
     </aside>
   )
 }
