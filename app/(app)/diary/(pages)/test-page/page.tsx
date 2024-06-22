@@ -1,8 +1,9 @@
-import CodeBlock from "@/components/CodeBlock"
-import Video from "@/components/Video"
-import Image from "@/components/Image"
-import Link from "@/components/Link"
-import Post from "@/components/Post"
+import CodeBlock from '@/components/CodeBlock'
+import Video from '@/components/Video'
+import Image from '@/components/Image'
+import Link from '@/components/Link'
+import Post from '@/components/Post'
+import testImage from '@/public/test.jpg'
 
 export default () => {
   return (
@@ -42,7 +43,7 @@ const useStore = create((set) => ({
           minus.
         </p>
 
-        <Image src="/test.jpg" alt="test" />
+        <Image src={testImage} alt="test" />
       </section>
     </Post>
   )

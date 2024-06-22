@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image, { StaticImageData } from 'next/image'
 
 export default function CustomImage({
   src,
@@ -6,7 +6,7 @@ export default function CustomImage({
   border = false,
   className,
 }: {
-  src: string
+  src: StaticImageData
   alt: string
   border?: boolean
   className?: string
@@ -14,9 +14,10 @@ export default function CustomImage({
   return (
     <Image
       {...{ src, alt }}
+      placeholder="blur"
       width={1000}
       height={1000}
-      className={`w-full rounded-[.75rem] pointer-events-none ${border ? "border" : ""} my-3 ${className}`}
+      className={`w-full rounded-[.75rem] pointer-events-none ${border ? 'border' : ''} my-3 ${className}`}
     />
   )
 }

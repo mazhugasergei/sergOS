@@ -13,7 +13,7 @@ export default function Video({
       autoPlay
       muted
       loop
-      className={`w-full ${border ? "border border-[#282828]" : ""} rounded-[.75rem] my-3 ${className}`}
+      className={`w-full bg-[#000] ${border ? 'border border-[#282828]' : ''} rounded-[.75rem] my-3 ${className}`}
     />
   )
 }
