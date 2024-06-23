@@ -8,7 +8,7 @@ import testImage from "@/public/test.jpg"
 export default () => {
   return (
     <Post title="Test Page" subtitle="June 2024">
-      <section id="lorem-ipsum">
+      <section id="">
         <h2>Lorem Ipsum</h2>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. <Link href="#">Soluta</Link> dolores, non
