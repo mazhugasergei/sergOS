@@ -1,28 +1,31 @@
-import Image from '@/components/Image'
-import Link from '@/components/Link'
-import Post from '@/components/Post'
-import OnlineLink from '@/components/OnlineLink'
-import map from '@/public/map.png'
+import Image from "@/components/Image"
+import Link from "@/components/Link"
+import Post from "@/components/Post"
+import OnlineLink from "@/components/OnlineLink"
+import map from "@/public/map.png"
+import profile from "@/public/profile.jpeg"
 
 export default function Page() {
   return (
     <Post title="Mazhuga Sergei" subtitle="June 2024">
+      <Image src={profile} alt="profile" className="aspect-[5/3]" />
+
       {/* about */}
       <section>
         <h2>About</h2>
         <p>
-          Hey, I'm Sergei, a web developer. Our team is currently building{' '}
+          Hey, I'm Sergei, a web developer. Our team is currently building{" "}
           <Link href="https://github.com/SVIT-Solutions/whale-hunter" external>
             Whale Hunter
           </Link>
-          , a tool for analyzing transactions in blockchains. Before Whale Hunter I was building{' '}
+          , a tool for analyzing transactions in blockchains. Before Whale Hunter I was building{" "}
           <Link href="https://github.com/stars/mazhugasergei/lists/commercial" external>
             commercial projects
           </Link>
-          . I have also created{' '}
+          . I have also created{" "}
           <Link href="https://www.npmjs.com/package/tgreports" external>
             Telegram Catcher Bot
-          </Link>{' '}
+          </Link>{" "}
           that catches errors and sends them to your Telegram.
         </p>
       </section>
@@ -49,7 +52,7 @@ export default function Page() {
       {/* map */}
       <section>
         <div>
-          <Image src={map} alt="map" className="aspect-[944/502]" />
+          <Image src={map} alt="map" className="aspect-[944/502]" border />
           <div className="flex items-center justify-end gap-2 text-sm text-muted mt-2">
             <svg
               width="12"

@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image'
+import Image, { StaticImageData } from "next/image"
 
 export default function CustomImage({
   src,
@@ -17,7 +17,7 @@ export default function CustomImage({
       placeholder="blur"
       width={1000}
       height={1000}
-      className={`w-full rounded-[.75rem] pointer-events-none ${border ? 'border' : ''} my-3 ${className}`}
+      className={`w-full object-cover rounded-[.75rem] pointer-events-none ${border ? "border" : ""} my-3 ${className}`}
     />
   )
 }

@@ -1,5 +1,5 @@
-import Link from '@/components/Link'
-import { Ghost } from 'lucide-react'
+import Link from "@/components/Link"
+import { Ghost } from "lucide-react"
 
 export default function NotFound() {
   return (
